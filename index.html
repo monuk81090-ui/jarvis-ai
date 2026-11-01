@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jarvis AI</title>
+  <style>
+    body {
+      background: #101820;
+      color: #00ffcc;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px 15px;
+    }
+    button, input {
+      padding: 12px;
+      margin: 8px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    button {
+      background: #00ffcc;
+      border: none;
+      cursor: pointer;
+    }
+    input {
+      width: 80%;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤖 JARVIS AI</h1>
+  <p>Namaste! Main Jarvis hoon.</p>
+  <input id="question" placeholder="Mujhse kuch poochho...">
+  <button onclick="askJarvis()">Ask Jarvis</button>
+  <p id="answer">Main aapki madad ke liye taiyar hoon!</p>
+
+  <script>
+    function askJarvis() {
+      const q = document.getElementById("question").value.trim();
+      const answer = document.getElementById("answer");
+      if (!q) {
+        answer.textContent = "Pehle apna sawal likho!";
+      } else {
+        answer.textContent =
+          "Aapne poochha: " + q +
+          ". Main abhi ek basic Jarvis demo hoon.";
+      }
+    }
+  </script>
+</body>
+</html>
